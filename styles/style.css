@@ -1,0 +1,133 @@
+body {
+  background-color: #f1e4e4;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+}
+@media only screen and (max-width: 420px) {
+  .container {
+    width: 85%;
+  }
+}
+
+header .pageTitle {
+  margin-top: 30px;
+  font-family: "Pacifico", cursive;
+  font-size: 70px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #9764c7;
+  text-shadow: 3px 3px #15cda8;
+}
+@media only screen and (max-width: 700px) {
+  header .pageTitle {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  header .pageTitle {
+    font-size: 45px;
+  }
+}
+header span {
+  margin-left: 20px;
+  color: #69468b;
+}
+
+div.input {
+  width: 75%;
+  height: 80px;
+  background-color: #099a97;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 420px) {
+  div.input {
+    width: 85%;
+  }
+}
+div.input input {
+  width: 80%;
+  height: 50px;
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  padding: 0 60px 0 0;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px 25px 25px 5px;
+  border: 0px;
+}
+div.input input button.addButton {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  border-radius: 25px;
+  background: #fff;
+  border: 0px;
+  cursor: pointer;
+}
+
+main #textPending {
+  color: #615a67;
+}
+main #listPending {
+  background-color: white;
+  height: 45px;
+  border-radius: 7px;
+  padding: 5px 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main #listPending #itemPending {
+  list-style-type: none;
+  float: right;
+}
+main #listPending #itemPending .buttons .fa-trash-alt {
+  padding-right: 10px;
+}
+main #listPending #itemPending .buttons .fa-check-circle {
+  padding-left: 10px;
+  border-left: 1px solid #a8a8a8;
+}
+main hr {
+  width: 70%;
+}
+main #textComplete {
+  color: #615a67;
+}
+main #listComplete {
+  background-color: white;
+  height: 45px;
+  border-radius: 7px;
+  padding: 5px 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main #listComplete #itemComplete {
+  list-style-type: none;
+  float: right;
+}
+main #listComplete #itemComplete .buttons .fa-trash-alt {
+  padding-right: 10px;
+}
+main #listComplete #itemComplete .buttons .fa-check-circle {
+  padding-left: 10px;
+  border-left: 1px solid #a8a8a8;
+}
+
+/*# sourceMappingURL=style.css.map */
