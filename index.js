@@ -1,3 +1,5 @@
+var counterPending = 1 //contador de tareas pendientes
+var counterComplete = 1//contador de tareas completas
 var taskContent //contenido de cada task
 var allTasks = [] //Array de las tasks como objects
 var listPending //lista de tareas pendientes
@@ -30,16 +32,20 @@ var printTask = function(){
 
     
     textPending = document.getElementById('textPending')
-    hideInstructions(textPending)
+    hideInstructions(counterPending, textPending)
     textComplete = document.getElementById('textComplete')
-    hideInstructions(textComplete)
+    hideInstructions(counterComplete, textComplete)
     
 }
 
 
 //esconde "no hay tareas pendientes" o "no hay tareas completadas"
-var hideInstructions = function(node){
-    node.classList.add('hide')
+var hideInstructions = function(counter, node){
+    if(counter !== 0){
+        node.classList.add('hide')
+    }else{
+        node.classList.remove('hide')
+    }
 }
 
 //crea y pega botones en los li
