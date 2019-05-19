@@ -1,45 +1,35 @@
-p.hide{
-    display: none
-}
 body {
   background-color: #f1e4e4;
-  font-family: "Roboto", sans-serif;
-}
+  font-family: 'Roboto', sans-serif; }
 
 .container {
   margin: 0 auto;
   width: 70%;
-  text-align: center;
-}
-@media only screen and (max-width: 420px) {
-  .container {
-    width: 85%;
-  }
-}
+  text-align: center; }
+  @media only screen and (max-width: 420px) {
+    .container {
+      width: 85%; } }
+
+p.hide {
+  display: none; }
 
 header .pageTitle {
   margin-top: 30px;
-  font-family: "Pacifico", cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 70px;
   text-align: center;
   letter-spacing: 2px;
   color: #9764c7;
-  text-shadow: 3px 3px #15cda8;
-}
-@media only screen and (max-width: 700px) {
-  header .pageTitle {
-    font-size: 50px;
-  }
-}
-@media only screen and (max-width: 420px) {
-  header .pageTitle {
-    font-size: 45px;
-  }
-}
+  text-shadow: 3px 3px #15cda8; }
+  @media only screen and (max-width: 700px) {
+    header .pageTitle {
+      font-size: 50px; } }
+  @media only screen and (max-width: 420px) {
+    header .pageTitle {
+      font-size: 45px; } }
 header span {
   margin-left: 20px;
-  color: #69468b;
-}
+  color: #69468b; }
 
 div.input {
   width: 75%;
@@ -52,47 +42,41 @@ div.input {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  position: relative;
-}
-@media only screen and (max-width: 420px) {
-  div.input {
-    width: 85%;
-  }
-}
-div.input input {
-  width: 90%;
-  height: 58px;
-  float: left;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-  text-indent: 18px;
-  padding: 0 60px 0 0;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 5px 25px 25px 5px;
-  border: 0px;
-}
-div.input a.addButton {
-  color: white;
-  font-size: 20px;
-  text-shadow: 2px 2px #69468b;
-  text-decoration: none;
-  background-color: #9764c7;
-  width: 60px;
-  height: 60px;
-  right: 15px;
-  border-radius: 100%;
-  text-align: center;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-}
+  position: relative; }
+  @media only screen and (max-width: 420px) {
+    div.input {
+      width: 85%; } }
+  div.input input {
+    width: 90%;
+    height: 58px;
+    float: left;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px 25px 25px 5px;
+    border: 0px; }
+  div.input a.addButton {
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px #69468b;
+    text-decoration: none;
+    background-color: #9764c7;
+    width: 60px;
+    height: 60px;
+    right: 15px;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; }
 
 main #textPending {
-  color: #615a67;
-}
+  color: #615a67; }
 main #listPending {
   background-color: white;
   height: 45px;
@@ -100,25 +84,19 @@ main #listPending {
   padding: 5px 8px;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-}
-main #listPending #itemPending {
-  list-style-type: none;
-  float: right;
-}
-main #listPending #itemPending .buttons .fa-trash-alt {
-  padding-right: 10px;
-}
-main #listPending #itemPending .buttons .fa-check-circle {
-  padding-left: 10px;
-  border-left: 1px solid #a8a8a8;
-}
+  align-items: center; }
+  main #listPending #itemPending {
+    list-style-type: none;
+    float: right; }
+    main #listPending #itemPending .buttons .fa-trash-alt {
+      padding-right: 10px; }
+    main #listPending #itemPending .buttons .fa-check-circle {
+      padding-left: 10px;
+      border-left: 1px solid #a8a8a8; }
 main hr {
-  width: 70%;
-}
+  width: 70%; }
 main #textComplete {
-  color: #615a67;
-}
+  color: #615a67; }
 main #listComplete {
   background-color: white;
   height: 45px;
@@ -126,18 +104,14 @@ main #listComplete {
   padding: 5px 8px;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-}
-main #listComplete #itemComplete {
-  list-style-type: none;
-  float: right;
-}
-main #listComplete #itemComplete .buttons .fa-trash-alt {
-  padding-right: 10px;
-}
-main #listComplete #itemComplete .buttons .fa-check-circle {
-  padding-left: 10px;
-  border-left: 1px solid #a8a8a8;
-}
+  align-items: center; }
+  main #listComplete #itemComplete {
+    list-style-type: none;
+    float: right; }
+    main #listComplete #itemComplete .buttons .fa-trash-alt {
+      padding-right: 10px; }
+    main #listComplete #itemComplete .buttons .fa-check-circle {
+      padding-left: 10px;
+      border-left: 1px solid #a8a8a8; }
 
 /*# sourceMappingURL=style.css.map */
