@@ -1,7 +1,11 @@
-var taskContent //The text content of each task
-var allTasks = [] //Array that stores new tasks as objects
-var listPending
-var listCompleted
+var taskContent //contenido de cada task
+var allTasks = [] //Array de las tasks como objects
+var listPending //lista de tareas pendientes
+var listComplete //lista de tareas completadas
+var textPending
+var textComplete
+var deleteBtn 
+var completeBtn
 
 
 var printTask = function(){
@@ -11,19 +15,46 @@ var printTask = function(){
     newTask.innerText = taskContent
     allTasks.unshift({
         text: taskContent,
-        isCompleted: false,
-        isDeleted: false
+        isPending: true,
+        isDeleted: false,
     })
-    //console.log(allTasks)
+    
+    appendBtn(deleteBtn, 'delete', newTask)
+
+    //console.log(allTasks[0])
     listPending = document.getElementById('listPending')
-    listPending.appendChild(newTask)
+    listComplete = document.getElementById('listComplete')
+    if(allTasks[0].isPending){
+        listPending.appendChild(newTask)
+    }else{
+        listComplete.appendChild(newTask)
+    }
+    
+    
     //console.log(listPending)
     textInput.value = ''
+
+
     
-    var textPending = document.getElementById('textPending')
-    textPending.classList.add('hide')
+    textPending = document.getElementById('textPending')
+    hideInstructions(textPending)
+    textComplete = document.getElementById('textComplete')
+    hideInstructions(textComplete)
+    
 }
 
+
+//esconde "no hay tareas pendientes" o "no hay tareas completadas"
+var hideInstructions = function(node){
+    node.classList.add('hide')
+}
+
+//crea y pega botones en los li
+var appendBtn = function(nameBtn, textBtn, appendNode){
+    var nameBtn = document.createElement('button')
+    nameBtn.innerText = textBtn
+    appendNode.appendChild(nameBtn)
+}
 
 
     
