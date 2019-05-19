@@ -9,7 +9,8 @@ var textComplete
 var deleteBtn 
 var completeBtn
 var checkBtn
-var removeSimple
+var removeSimple //icono del tacho de basura sin hover
+var checkSimple //icono del tick sin checkear
 
 
 var printTask = function(){
@@ -25,14 +26,32 @@ var printTask = function(){
     })
 
     listPending = document.getElementById('listPending')
-    removeSimple = document.getElementById('trashIconSimple')
-    checkSimple = document.getElementById('checkIconSimple')
 
-    deleteBtn = document.createElement('a')
-    newTask.appendChild(deleteBtn)
-    deleteBtn.appendChild(removeSimple)
-
+    appendRemoveIconSimple(newTask)
+    appendCheckIconSimple(newTask)
+    
     listPending.appendChild(newTask)
-
     textInput.value = ''
+}
+
+//crea el anchor con el tacho de basura y se lo inserta al li
+//task es el li creado
+var appendRemoveIconSimple = function(task){
+    deleteBtn = document.createElement('a')
+    removeSimple = document.createElement('img')
+    removeSimple.src = 'assets/remove_icon.svg'
+    removeSimple.classList.add('removeIcon')
+    task.appendChild(deleteBtn)
+    deleteBtn.appendChild(removeSimple)
+}
+
+//crea el anchor con el tick sin checkear
+//task es el li creado
+var appendCheckIconSimple = function(task){
+    checkBtn = document.createElement('a')
+    checkSimple = document.createElement('img')
+    checkSimple.src = 'assets/done_icon.svg'
+    checkSimple.classList.add('checkIcon')
+    task.appendChild(checkBtn)
+    checkBtn.appendChild(checkSimple)
 }

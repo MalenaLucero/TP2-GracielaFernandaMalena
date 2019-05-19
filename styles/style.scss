@@ -56,6 +56,11 @@ p.hide{
 
 ul{
     list-style: none;
+    padding: 0;
+}
+
+img.removeIcon, img.checkIcon{
+    margin: 10px 10px 10px 0;
 }
 
 header{
@@ -148,8 +153,8 @@ main{
         color: $text-main;
     }
     .listComplete{
-        @include texts-box();
         .itemComplete{
+            @include texts-box();
             list-style-type: none;
             float: right;
             

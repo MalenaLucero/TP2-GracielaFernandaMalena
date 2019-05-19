@@ -14,7 +14,11 @@ p.hide {
   display: none; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
+
+img.removeIcon, img.checkIcon {
+  margin: 10px 10px 10px 0; }
 
 header .pageTitle {
   margin-top: 30px;
@@ -99,7 +103,7 @@ main hr {
   width: 70%; }
 main .textComplete {
   color: #615a67; }
-main .listComplete {
+main .listComplete .itemComplete {
   background-color: white;
   height: 45px;
   border-radius: 7px;
@@ -107,14 +111,13 @@ main .listComplete {
   margin-bottom: 5px;
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
-  main .listComplete .itemComplete {
-    list-style-type: none;
-    float: right; }
-    main .listComplete .itemComplete .buttons .fa-trash-alt {
-      padding-right: 10px; }
-    main .listComplete .itemComplete .buttons .fa-check-circle {
-      padding-left: 10px;
-      border-left: 1px solid #a8a8a8; }
+  align-items: center;
+  list-style-type: none;
+  float: right; }
+  main .listComplete .itemComplete .buttons .fa-trash-alt {
+    padding-right: 10px; }
+  main .listComplete .itemComplete .buttons .fa-check-circle {
+    padding-left: 10px;
+    border-left: 1px solid #a8a8a8; }
 
 /*# sourceMappingURL=style.css.map */
