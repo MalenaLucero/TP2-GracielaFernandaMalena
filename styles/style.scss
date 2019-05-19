@@ -25,9 +25,9 @@ $tablet: 700px;
     height: 45px;
     border-radius: 7px;
     padding: 5px 8px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    //display: flex;
+    //justify-content: flex-end;
+    //align-items: center;
 }
 
 @mixin icon-border{
@@ -51,6 +51,10 @@ body{
 
 p.hide{
     display: none;
+}
+
+ul{
+    list-style: none;
 }
 
 header{
@@ -118,14 +122,14 @@ div.input{
     }
 }
 main{
-    #textPending{
+    .textPending{
         color: $text-main;
     }
-    #listPending{
-        @include texts-box();
-        #itemPending{
+    .listPending{
+        .itemPending{
+            @include texts-box();
             list-style-type: none;
-            float: right;
+            //float: right;
             .buttons{
                 .fa-trash-alt{
                     padding-right: 10px;
@@ -139,12 +143,12 @@ main{
     hr{
         width: 70%
     }
-    #textComplete{
+    .textComplete{
         color: $text-main;
     }
-    #listComplete{
+    .listComplete{
         @include texts-box();
-        #itemComplete{
+        .itemComplete{
             list-style-type: none;
             float: right;
             
