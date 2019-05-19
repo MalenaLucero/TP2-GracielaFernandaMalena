@@ -85,6 +85,10 @@ main .listPending .itemPending {
   height: 45px;
   border-radius: 7px;
   padding: 5px 8px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   list-style-type: none; }
   main .listPending .itemPending .buttons .fa-trash-alt {
     padding-right: 10px; }
@@ -99,7 +103,11 @@ main .listComplete {
   background-color: white;
   height: 45px;
   border-radius: 7px;
-  padding: 5px 8px; }
+  padding: 5px 8px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
   main .listComplete .itemComplete {
     list-style-type: none;
     float: right; }

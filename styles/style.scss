@@ -25,9 +25,10 @@ $tablet: 700px;
     height: 45px;
     border-radius: 7px;
     padding: 5px 8px;
-    //display: flex;
-    //justify-content: flex-end;
-    //align-items: center;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 @mixin icon-border{

@@ -8,11 +8,12 @@ var textPending
 var textComplete
 var deleteBtn 
 var completeBtn
+var checkBtn
+var removeSimple
 
 
 var printTask = function(){
     var textInput = document.getElementById('textInput')
-    console.log(textInput)
     taskContent = textInput.value 
     var newTask = document.createElement('li')
     newTask.innerText = taskContent
@@ -22,9 +23,15 @@ var printTask = function(){
         isPending: true,
         isDeleted: false,
     })
-    
-    appendBtn(deleteBtn, 'delete', newTask)
-    appendBtn(completeBtn, 'complete', newTask)
+
+    removeSimple = document.getElementById('trashIconSimple')
+    checkSimple = document.getElementById('checkIconSimple')
+
+    appendBtn(deleteBtn, removeSimple, newTask)
+    appendBtn(checkBtn, checkSimple, newTask)
+    //appendBtn(completeBtn, 'complete', newTask)
+    console.log(newTask)
+    console.log(removeSimple)
 
     listPending = document.getElementById('listPending')
     listComplete = document.getElementById('listComplete')
@@ -52,9 +59,9 @@ var hideInstructions = function(counter, node){
 
 //crea y pega botones en los li
 var appendBtn = function(nameBtn, textBtn, appendNode){
-    var nameBtn = document.createElement('button')
-    nameBtn.innerText = textBtn
+    var nameBtn = document.createElement('a')
     appendNode.appendChild(nameBtn)
+    nameBtn.appendChild(textBtn)
 }
 
 //ubica el li en la lista correspondiente
