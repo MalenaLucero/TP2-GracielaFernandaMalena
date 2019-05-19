@@ -1,0 +1,158 @@
+//colors//
+$body-color: #f1e4e4;
+$title-color: #9764c7;
+$month-color: #69468b;
+$input-background-dark: #099a97;
+$text-main: #615a67;
+$placeholder: white;
+
+//breakpoints//
+$mobile: 420px;
+$tablet: 700px;
+
+
+@mixin pageTitle-font{
+    font-family: 'Pacifico', cursive;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: $title-color;
+    text-shadow: 3px 3px #15cda8;
+}
+
+@mixin texts-box{
+    background-color: white;
+    height: 45px;
+    border-radius: 7px;
+    padding: 5px 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin icon-border{
+    padding-left: 10px;
+    border-left: 1px solid #a8a8a8;
+}
+
+body{
+    background-color: $body-color;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    @media only screen and (max-width: $mobile){
+        width: 85%;
+    }
+}
+
+header{
+    .pageTitle{
+        margin-top: 30px;
+        @include pageTitle-font();
+        @media only screen and (max-width: $tablet){
+            font-size: 50px;
+        }
+        @media only screen and (max-width: $mobile){
+            font-size: 45px;
+        }
+        } 
+    span{
+        margin-left: 20px;
+        color: $month-color;
+        }
+    }
+
+div.input{
+    width: 75%;
+    height: 80px;
+    background-color: $input-background-dark;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    @media only screen and (max-width: $mobile){
+        width: 85%;
+    }
+    input{
+        width: 90%;
+        height: 58px;
+        float: left;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        text-indent: 18px;
+        padding: 0 60px 0 0;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 5px 25px 25px 5px;
+        border: 0px;
+    }
+    a.addButton{ 
+        color: white;
+        font-size: 20px;
+        text-shadow: 2px 2px #69468b;
+        text-decoration: none;
+        background-color: $title-color;
+        width: 60px;
+        height: 60px;
+        right: 15px;
+        border-radius: 100%;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+    }
+}
+main{
+    #textPending{
+        color: $text-main;
+    }
+    #listPending{
+        @include texts-box();
+        #itemPending{
+            list-style-type: none;
+            float: right;
+            .buttons{
+                .fa-trash-alt{
+                    padding-right: 10px;
+                }
+                .fa-check-circle{
+                    @include icon-border()
+                }
+            }
+        }
+    }
+    hr{
+        width: 70%
+    }
+    #textComplete{
+        color: $text-main;
+    }
+    #listComplete{
+        @include texts-box();
+        #itemComplete{
+            list-style-type: none;
+            float: right;
+            
+            .buttons{             
+                .fa-trash-alt{
+                    padding-right: 10px;
+                }
+                .fa-check-circle{
+                    @include icon-border()
+                }   
+            }
+        }
+    }  
+}
+
