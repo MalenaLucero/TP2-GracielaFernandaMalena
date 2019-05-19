@@ -20,18 +20,11 @@ var printTask = function(){
     })
     
     appendBtn(deleteBtn, 'delete', newTask)
+    appendBtn(completeBtn, 'complete', newTask)
 
-    //console.log(allTasks[0])
     listPending = document.getElementById('listPending')
     listComplete = document.getElementById('listComplete')
-    if(allTasks[0].isPending){
-        listPending.appendChild(newTask)
-    }else{
-        listComplete.appendChild(newTask)
-    }
-    
-    
-    //console.log(listPending)
+    arrangeLists(newTask)
     textInput.value = ''
 
 
@@ -54,6 +47,17 @@ var appendBtn = function(nameBtn, textBtn, appendNode){
     var nameBtn = document.createElement('button')
     nameBtn.innerText = textBtn
     appendNode.appendChild(nameBtn)
+}
+
+//ubica el li en la lista correspondiente
+var arrangeLists = function(task){
+    for(var i = 0; i < allTasks.length; i++){
+        if(allTasks[i].isPending){
+            listPending.appendChild(task)
+        }else{
+            listComplete.appendChild(task)
+        }
+    }
 }
 
 
