@@ -12,6 +12,7 @@ var completeBtn
 
 var printTask = function(){
     var textInput = document.getElementById('textInput')
+    console.log(textInput)
     taskContent = textInput.value 
     var newTask = document.createElement('li')
     newTask.innerText = taskContent
