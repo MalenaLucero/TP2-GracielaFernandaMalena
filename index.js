@@ -17,7 +17,7 @@ var printTask = function(){
     taskContent = textInput.value 
     var newTask = document.createElement('li')
     newTask.innerText = taskContent
-    newTask.classList.add('itemPending')
+    newTask.classList.add('itemPending itemComplete')
     allTasks.unshift({
         text: taskContent,
         isPending: true,

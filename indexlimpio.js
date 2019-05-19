@@ -1,14 +1,14 @@
 var counterPending = 1 //contador de tareas pendientes
 var counterComplete = 1//contador de tareas completas
-var taskContent //contenido de cada task
+var taskContent //texto de cada task
 var allTasks = [] //Array de las tasks como objects
 var listPending //lista de tareas pendientes
 var listComplete //lista de tareas completadas
-var textPending
-var textComplete
-var deleteBtn 
-var completeBtn
-var checkBtn
+var textPending //texto "no hay tareas pendientes"
+var textComplete //texto "no hay tareas completadas"
+var deleteBtn //anchor que contiene al icono removeSimple
+var completeBtn 
+var checkBtn //anchor que contiene al icono checkSimple
 var removeSimple //icono del tacho de basura sin hover
 var checkSimple //icono del tick sin checkear
 
@@ -19,19 +19,32 @@ var printTask = function(){
     var newTask = document.createElement('li')
     newTask.innerText = taskContent
     newTask.classList.add('itemPending')
+    newTask.classList.add('itemComplete')
     allTasks.unshift({
         text: taskContent,
-        isPending: true,
+        isPending: false,
         isDeleted: false,
     })
+    console.log(allTasks[0])
 
-    listPending = document.getElementById('listPending')
+    
+    arrangeLists(newTask)
 
     appendRemoveIconSimple(newTask)
     appendCheckIconSimple(newTask)
-    
-    listPending.appendChild(newTask)
+
     textInput.value = ''
+}
+
+//ubica el li en la lista correspondiente
+var arrangeLists = function(task){
+    listPending = document.getElementById('listPending')
+    listComplete = document.getElementById('listComplete')
+    if(allTasks[0].isPending){
+        listPending.appendChild(task)
+    }else{
+        listComplete.appendChild(task)
+    }
 }
 
 //crea el anchor con el tacho de basura y se lo inserta al li

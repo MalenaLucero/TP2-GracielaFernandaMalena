@@ -112,8 +112,7 @@ main .listComplete .itemComplete {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  list-style-type: none;
-  float: right; }
+  list-style-type: none; }
   main .listComplete .itemComplete .buttons .fa-trash-alt {
     padding-right: 10px; }
   main .listComplete .itemComplete .buttons .fa-check-circle {
