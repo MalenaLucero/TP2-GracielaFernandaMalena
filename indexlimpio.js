@@ -14,6 +14,11 @@ var checkSimple //icono del tick sin checkear
 
 
 var printTask = function(){
+    listPending = document.getElementById('listPending')
+    //listPending.innerHTML = ''
+    listComplete = document.getElementById('listComplete')
+    //listComplete = ''
+
     var textInput = document.getElementById('textInput')
     taskContent = textInput.value 
     var newTask = document.createElement('li')
@@ -25,21 +30,17 @@ var printTask = function(){
         isPending: false,
         isDeleted: false,
     })
-    console.log(allTasks[0])
-
-    
-    arrangeLists(newTask)
 
     appendRemoveIconSimple(newTask)
     appendCheckIconSimple(newTask)
-
+ 
+    arrangeLists(newTask)
+    
     textInput.value = ''
 }
 
 //ubica el li en la lista correspondiente
 var arrangeLists = function(task){
-    listPending = document.getElementById('listPending')
-    listComplete = document.getElementById('listComplete')
     if(allTasks[0].isPending){
         listPending.appendChild(task)
     }else{

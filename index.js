@@ -29,9 +29,7 @@ var printTask = function(){
 
     appendBtn(deleteBtn, removeSimple, newTask)
     appendBtn(checkBtn, checkSimple, newTask)
-    //appendBtn(completeBtn, 'complete', newTask)
-    console.log(newTask)
-    console.log(removeSimple)
+    
 
     listPending = document.getElementById('listPending')
     listComplete = document.getElementById('listComplete')
