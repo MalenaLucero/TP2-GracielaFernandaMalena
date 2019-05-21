@@ -34,10 +34,7 @@ var loadedPage = function(){
         checkSimple.classList.add('checkIcon')
         checkBtn.id = index
         
-        checkBtn.onclick = function(){
-            allTasks[checkBtn.id].isPending = !allTasks[checkBtn.id].isPending
-            loadedPage()
-        }
+        checkBtn.onclick = function(){toggle(this.id)}
 
         newTask.appendChild(checkBtn)
         checkBtn.appendChild(checkSimple)
@@ -48,10 +45,15 @@ var loadedPage = function(){
             listComplete.appendChild(newTask)
         }
 
-        console.log(checkBtn)
+        console.log(checkBtn.id)
     })
 
     
+}
+
+var toggle = function(id){
+    allTasks[id].isPending = !allTasks[id].isPending
+    loadedPage()
 }
 
 /*var printTask = function(){
@@ -62,7 +64,6 @@ var loadedPage = function(){
         isDeleted: false,
     })
     textInput.value = ''
-    
 }*/
 
 //ubica el li en la lista correspondiente
