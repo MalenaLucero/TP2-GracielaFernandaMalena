@@ -33,19 +33,23 @@ var loadedPage = function(){
         checkSimple.src = 'assets/done_icon.svg'
         checkSimple.classList.add('checkIcon')
         checkBtn.id = index
-
+        
         checkBtn.onclick = function(){
             allTasks[checkBtn.id].isPending = !allTasks[checkBtn.id].isPending
             loadedPage()
-
         }
+
         newTask.appendChild(checkBtn)
         checkBtn.appendChild(checkSimple)
 
-        arrangeLists(item.isPending, newTask)
+        if(item.isPending){
+            listPending.appendChild(newTask)
+        }else{
+            listComplete.appendChild(newTask)
+        }
 
+        console.log(checkBtn)
     })
-    console.log(allTasks)
 
     
 }
