@@ -1,9 +1,9 @@
 var counterPending = 1 //contador de tareas pendientes
 var counterComplete = 1//contador de tareas completas
 var allTasks = [
-    {text: 'uno', isPending: true, isDeleted: false},
-    {text: 'dos', isPending: true, isDeleted: false},
-    {text: 'tres', isPending: false, isDeleted: false},
+    //{text: 'uno', isPending: true, isDeleted: false},
+    //{text: 'dos', isPending: true, isDeleted: false},
+    //{text: 'tres', isPending: false, isDeleted: false},
 ] //Array de las tasks como objects
 var listPending //lista de tareas pendientes
 var listComplete //lista de tareas completadas
@@ -25,10 +25,11 @@ var loadedPage = function(){
         newTask.innerText = item.text
         newTask.classList.add('itemPending')
         newTask.classList.add('itemComplete')
-        //appendRemoveIconSimple(newTask)
+        appendRemoveIconSimple(newTask)
         //appendCheckIconSimple(newTask)
 
         checkBtn = document.createElement('a')
+        checkBtn.classList.add('checkBtn')
         checkSimple = document.createElement('img')
         checkSimple.src = 'assets/done_icon.svg'
         checkSimple.classList.add('checkIcon')
@@ -38,7 +39,7 @@ var loadedPage = function(){
 
         newTask.appendChild(checkBtn)
         checkBtn.appendChild(checkSimple)
-
+        
         if(item.isPending){
             listPending.appendChild(newTask)
         }else{
@@ -47,8 +48,12 @@ var loadedPage = function(){
 
         console.log(checkBtn.id)
     })
+}
 
-    
+var handleKeyPress = function(event){
+    if(event.code === 'Enter'){
+        printTask()
+    }
 }
 
 var toggle = function(id){
@@ -56,7 +61,7 @@ var toggle = function(id){
     loadedPage()
 }
 
-/*var printTask = function(){
+var printTask = function(){
     var textInput = document.getElementById('textInput')
     allTasks.unshift({
         text: textInput.value,
@@ -64,7 +69,8 @@ var toggle = function(id){
         isDeleted: false,
     })
     textInput.value = ''
-}*/
+    loadedPage()
+}
 
 //ubica el li en la lista correspondiente
 var arrangeLists = function(isPending, task){
@@ -79,7 +85,9 @@ var arrangeLists = function(isPending, task){
 //task es el li creado
 var appendRemoveIconSimple = function(task){
     deleteBtn = document.createElement('a')
+    deleteBtn.classList.add('deleteBtn')
     removeSimple = document.createElement('img')
+    removeSimple.classList.add('removeSimple')
     removeSimple.src = 'assets/remove_icon.svg'
     removeSimple.classList.add('removeIcon')
     task.appendChild(deleteBtn)

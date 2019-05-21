@@ -16,7 +16,7 @@
         <h1 class="pageTitle">To-do list:<span>Junio</span></h1>
     </header>
     <div class="input">
-        <input id="textInput" placeholder="Escribí una tarea">
+        <input id="textInput" placeholder="Escribí una tarea" onkeypress="handleKeyPress(event)">
         <a href="#" class="addButton" onclick="printTask()"><i class="fas fa-plus"></i></a>
     </div>
     <main class="container">
