@@ -1,5 +1,5 @@
-var counterPending = 1 //contador de tareas pendientes
-var counterComplete = 1//contador de tareas completas
+var counterPending //contador de tareas pendientes
+var counterComplete//contador de tareas completas
 var allTasks = [
     //{text: 'uno', isPending: true, isDeleted: false},
     //{text: 'dos', isPending: true, isDeleted: false},
@@ -20,6 +20,10 @@ var loadedPage = function(){
     listPending.innerHTML = ''
     listComplete = document.getElementById('listComplete')
     listComplete.innerHTML = ''
+    textPending = document.getElementById('textPending')
+    textComplete = document.getElementById('textComplete')
+    counterPending = 0
+    counterComplete = 0
     allTasks.map(function(item, index){
         var newTask = document.createElement('li')
         newTask.innerText = item.text
@@ -42,12 +46,24 @@ var loadedPage = function(){
         
         if(item.isPending){
             listPending.appendChild(newTask)
+            counterPending ++
         }else{
             listComplete.appendChild(newTask)
+            counterComplete ++
         }
-
-        console.log(checkBtn.id)
     })
+    //pone y saca "no hay tareas pendientes"
+    if(counterPending !== 0){
+        textPending.classList.add('hide')
+    }else{
+        textPending.classList.remove('hide')
+    }
+    //pone y saca "no hay tareas completadas"
+    if(counterComplete !== 0){
+        textComplete.classList.add('hide')
+    }else{
+        textComplete.classList.remove('hide')
+    }
 }
 
 var handleKeyPress = function(event){
