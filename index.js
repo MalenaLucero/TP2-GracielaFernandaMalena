@@ -12,6 +12,7 @@ var checkBtn
 var removeSimple
 
 
+
 var printTask = function(){
     var textInput = document.getElementById('textInput')
     taskContent = textInput.value 
