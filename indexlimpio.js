@@ -14,6 +14,9 @@ var completeBtn
 var checkBtn //anchor que contiene al icono checkSimple
 var removeSimple //icono del tacho de basura sin hover
 var checkSimple //icono del tick sin checkear
+var numberPending //para mostrar la cantidad de tareas pendientes
+var numberComplete
+var taskCounter
 
 var loadedPage = function(){
     listPending = document.getElementById('listPending')
@@ -29,8 +32,19 @@ var loadedPage = function(){
         newTask.innerText = item.text
         newTask.classList.add('itemPending')
         newTask.classList.add('itemComplete')
-        appendRemoveIconSimple(newTask)
+        //appendRemoveIconSimple(newTask)
         //appendCheckIconSimple(newTask)
+
+        deleteBtn = document.createElement('a')
+        deleteBtn.classList.add('deleteBtn')
+        removeSimple = document.createElement('img')
+        removeSimple.classList.add('removeSimple')
+        removeSimple.src = 'assets/remove_icon.svg'
+        removeSimple.classList.add('removeIcon')
+        newTask.appendChild(deleteBtn)
+        deleteBtn.appendChild(removeSimple)
+        deleteBtn.id = index
+        deleteBtn.onclick = function(){ deleteItem(this) }
 
         checkBtn = document.createElement('a')
         checkBtn.classList.add('checkBtn')
@@ -64,6 +78,7 @@ var loadedPage = function(){
     }else{
         textComplete.classList.remove('hide')
     }
+
 }
 
 var handleKeyPress = function(event){
@@ -74,6 +89,11 @@ var handleKeyPress = function(event){
 
 var toggle = function(id){
     allTasks[id].isPending = !allTasks[id].isPending
+    loadedPage()
+}
+
+var deleteItem = function(btn){
+    allTasks.splice(btn.id, 1)
     loadedPage()
 }
 
@@ -108,6 +128,7 @@ var appendRemoveIconSimple = function(task){
     removeSimple.classList.add('removeIcon')
     task.appendChild(deleteBtn)
     deleteBtn.appendChild(removeSimple)
+    deleteBtn.onclick = function(){ deleteItem(this) }
 }
 
 //crea el anchor con el tick sin checkear
