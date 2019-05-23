@@ -99,13 +99,16 @@ var deleteItem = function(btn){
 
 var printTask = function(){
     var textInput = document.getElementById('textInput')
-    allTasks.unshift({
+    //no entra si el input esta vacio
+    if(textInput.value !== ''){
+        allTasks.unshift({
         text: textInput.value,
         isPending: true,
         isDeleted: false,
-    })
-    textInput.value = ''
-    loadedPage()
+        })
+        textInput.value = ''
+        loadedPage()
+    }
 }
 
 //ubica el li en la lista correspondiente
