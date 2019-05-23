@@ -55,7 +55,7 @@ var loadedPage = function(){
         checkBtn = document.createElement('a')
         checkBtn.classList.add('checkBtn')
         checkSimple = document.createElement('img')
-        checkSimple.src = 'assets/done_icon.svg'
+        checkSimple.src = 'assets/checkmark_purple.png'
         checkSimple.classList.add('checkIcon')
         checkBtn.id = index
         
@@ -70,6 +70,7 @@ var loadedPage = function(){
         }else{
             listComplete.appendChild(newTask)
             counterComplete ++
+            checkSimple.src = 'assets/checkmark_circle_purple.png'
         }
     })
     //pone y saca "no hay tareas pendientes"
