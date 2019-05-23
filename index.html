@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<<<<<<< HEAD
     <script src="index-v2.js" type="text/javascript"></script>
 </head>
 <body onload="printItems">
+=======
+    <script src="indexlimpio.js" type="text/javascript"></script>
+</head>
+<body onload="loadedPage()">
+>>>>>>> a65932b601141934ae46e4f176e4853188b95401
     <header>
         <h1 class="pageTitle">To-do list:<span>Junio</span></h1>
     </header>
     <div class="input">
+<<<<<<< HEAD
         <input id="textInput" placeholder="Escribí una tarea">
         <a href="#" class="addButton" onclick="sendTask()"><i class="fas fa-plus"></i></a>
     </div>
@@ -26,7 +33,35 @@
         <p id="textComplete">No hay tareas completadas</p>
         <ul id="listComplete">
 
+=======
+        <input id="textInput" placeholder="Escribí una tarea" onkeypress="handleKeyPress(event)">
+        <a href="#" class="addButton" onclick="printTask()"><i class="fas fa-plus"></i></a>
+    </div>
+    <main class="container">
+        <p id="textPending" class="textPending">No hay tareas pendientes</p>
+        <ul id="listPending" class="listPending">
+            <!--<li id="itemPending" class="itemPending">
+                <div class="buttons">
+                    <a><img src="assets/remove_icon.svg" id="trash-can-simple"></a>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </li>-->
         </ul>
+        <hr>
+        <p id="textComplete" class="textComplete">No hay tareas completadas</p>
+        <ul id="listComplete" class="listComplete">
+            <!--<li id="itemComplete" class="itemComplete">
+                <div class="buttons">
+                    <i class="far fa-trash-alt"></i>
+                    </i>
+                </div>
+            </li>-->
+>>>>>>> a65932b601141934ae46e4f176e4853188b95401
+        </ul>
+        <div id="taskCounter">
+            <div>Tareas pendientes: <span id="counterPending"></span></div>
+            <div>Tareas completadas: <span id="counterComplete"></span></div>
+        </div>
     </main>
 </body>
 </html>
