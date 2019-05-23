@@ -27,7 +27,7 @@ $tablet: 700px;
     padding: 5px 8px;
     margin-bottom: 5px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -127,24 +127,41 @@ div.input{
 
     }
 }
+
+
+
+
+.itemPending{
+    @include texts-box();
+    list-style: none;
+    //float: right;
+    .buttons{
+        .fa-trash-alt{
+            padding-right: 10px;
+        }
+        .fa-check-circle{
+            @include icon-border()
+        }
+    }
+}
+
+.itemComplete{
+    @include texts-box();
+    list-style: none;
+    //float: right;
+    .buttons{             
+        .fa-trash-alt{
+            padding-right: 10px;
+        }
+        .fa-check-circle{
+            @include icon-border()
+        }   
+    }
+}
+
 main{
     .textPending{
         color: $text-main;
-    }
-    .listPending{
-        .itemPending{
-            @include texts-box();
-            list-style-type: none;
-            //float: right;
-            .buttons{
-                .fa-trash-alt{
-                    padding-right: 10px;
-                }
-                .fa-check-circle{
-                    @include icon-border()
-                }
-            }
-        }
     }
     hr{
         width: 70%
@@ -152,20 +169,5 @@ main{
     .textComplete{
         color: $text-main;
     }
-    .listComplete{
-        .itemComplete{
-            @include texts-box();
-            list-style-type: none;
-            //float: right;
-            .buttons{             
-                .fa-trash-alt{
-                    padding-right: 10px;
-                }
-                .fa-check-circle{
-                    @include icon-border()
-                }   
-            }
-        }
-    }  
 }
 
