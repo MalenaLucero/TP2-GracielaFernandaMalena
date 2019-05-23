@@ -17,6 +17,8 @@ var checkSimple //icono del tick sin checkear
 var numberPending //para mostrar la cantidad de tareas pendientes
 var numberComplete
 var taskCounter
+var spanPending
+var spanComplete
 
 var loadedPage = function(){
     listPending = document.getElementById('listPending')
@@ -27,6 +29,10 @@ var loadedPage = function(){
     textComplete = document.getElementById('textComplete')
     counterPending = 0
     counterComplete = 0
+    spanPending = document.getElementById('counterPending')
+    console.log(spanPending)
+    spanComplete = document.getElementById('counterComplete')
+    console.log(spanComplete)
     allTasks.map(function(item, index){
         var newTask = document.createElement('li')
         newTask.innerText = item.text
@@ -78,6 +84,8 @@ var loadedPage = function(){
     }else{
         textComplete.classList.remove('hide')
     }
+    spanPending.innerText = counterPending
+    spanComplete.innerText = counterComplete
 
 }
 
