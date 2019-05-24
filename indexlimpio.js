@@ -17,6 +17,9 @@ var checkSimple //icono del tick sin checkear
 var numberPending //para mostrar la cantidad de tareas pendientes
 var numberComplete
 var taskCounter
+var spanPending
+var spanComplete
+var anchorContainer //div que contiene los iconos de cada lista
 
 var loadedPage = function(){
     listPending = document.getElementById('listPending')
@@ -27,11 +30,17 @@ var loadedPage = function(){
     textComplete = document.getElementById('textComplete')
     counterPending = 0
     counterComplete = 0
+    spanPending = document.getElementById('counterPending')
+    console.log(spanPending)
+    spanComplete = document.getElementById('counterComplete')
+    console.log(spanComplete)
     allTasks.map(function(item, index){
         var newTask = document.createElement('li')
         newTask.innerText = item.text
         newTask.classList.add('itemPending')
-        newTask.classList.add('itemComplete')
+        anchorContainer = document.createElement('div')
+        anchorContainer.classList.add('anchorContainer')
+        newTask.appendChild(anchorContainer)
         //appendRemoveIconSimple(newTask)
         //appendCheckIconSimple(newTask)
 
@@ -39,9 +48,9 @@ var loadedPage = function(){
         deleteBtn.classList.add('deleteBtn')
         removeSimple = document.createElement('img')
         removeSimple.classList.add('removeSimple')
-        removeSimple.src = 'assets/remove_icon.svg'
+        removeSimple.src = 'assets/delete_purple.png'
         removeSimple.classList.add('removeIcon')
-        newTask.appendChild(deleteBtn)
+        anchorContainer.appendChild(deleteBtn)
         deleteBtn.appendChild(removeSimple)
         deleteBtn.id = index
         deleteBtn.onclick = function(){ deleteItem(this) }
@@ -49,21 +58,24 @@ var loadedPage = function(){
         checkBtn = document.createElement('a')
         checkBtn.classList.add('checkBtn')
         checkSimple = document.createElement('img')
-        checkSimple.src = 'assets/done_icon.svg'
+        checkSimple.src = 'assets/checkmark_purple.png'
         checkSimple.classList.add('checkIcon')
         checkBtn.id = index
         
         checkBtn.onclick = function(){toggle(this.id)}
 
-        newTask.appendChild(checkBtn)
+        anchorContainer.appendChild(checkBtn)
         checkBtn.appendChild(checkSimple)
         
         if(item.isPending){
             listPending.appendChild(newTask)
             counterPending ++
+            newTask.classList.replace('itemComplete', 'itemPending')
         }else{
             listComplete.appendChild(newTask)
             counterComplete ++
+            checkSimple.src = 'assets/checkmark_circle_purple.png'
+            newTask.classList.replace('itemPending', 'itemComplete')
         }
     })
     //pone y saca "no hay tareas pendientes"
@@ -78,6 +90,8 @@ var loadedPage = function(){
     }else{
         textComplete.classList.remove('hide')
     }
+    spanPending.innerText = counterPending
+    spanComplete.innerText = counterComplete
 
 }
 
@@ -99,13 +113,16 @@ var deleteItem = function(btn){
 
 var printTask = function(){
     var textInput = document.getElementById('textInput')
-    allTasks.unshift({
+    //no entra si el input esta vacio
+    if(textInput.value !== ''){
+        allTasks.unshift({
         text: textInput.value,
         isPending: true,
         isDeleted: false,
-    })
-    textInput.value = ''
-    loadedPage()
+        })
+        textInput.value = ''
+        loadedPage()
+    }
 }
 
 //ubica el li en la lista correspondiente
