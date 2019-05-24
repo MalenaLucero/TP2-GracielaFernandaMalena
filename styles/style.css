@@ -120,43 +120,9 @@ div.input {
 
 main .textPending {
   color: #615a67; }
-main .listPending .itemPending {
-  background-color: #dfd0ee;
-  height: 45px;
-  padding: 5px 10px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  border: 3px solid #69468b;
-  box-shadow: 5px 5px #c0b6b6;
-  color: black;
-  font-weight: bold;
-  list-style-type: none; }
-  main .listPending .itemPending .buttons .fa-trash-alt {
-    padding-right: 10px; }
-  main .listPending .itemPending .buttons .fa-check-circle {
-    padding-left: 10px;
-    border-left: 1px solid #a8a8a8; }
 main hr {
   width: 70%; }
 main .textComplete {
   color: #615a67; }
-main .listComplete .itemComplete {
-  background-color: #dfd0ee;
-  height: 45px;
-  padding: 5px 10px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  border: 3px solid #69468b;
-  box-shadow: 5px 5px #c0b6b6;
-  color: black;
-  font-weight: bold;
-  list-style-type: none; }
-  main .listComplete .itemComplete .buttons .fa-trash-alt {
-    padding-right: 10px; }
-  main .listComplete .itemComplete .buttons .fa-check-circle {
-    padding-left: 10px;
-    border-left: 1px solid #a8a8a8; }
 
 /*# sourceMappingURL=style.css.map */

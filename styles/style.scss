@@ -165,39 +165,11 @@ main{
     .textPending{
         color: $text-main;
     }
-    .listPending{
-        .itemPending{
-            @include texts-box();
-            list-style-type: none;
-            .buttons{
-                .fa-trash-alt{
-                    padding-right: 10px;
-                }
-                .fa-check-circle{
-                    @include icon-border()
-                }
-            }
-        }
-    }
     hr{
         width: 70%
     }
     .textComplete{
         color: $text-main;
-    }
-    .listComplete{
-        .itemComplete{
-            @include texts-box();
-            list-style-type: none;
-            .buttons{             
-                .fa-trash-alt{
-                    padding-right: 10px;
-                }
-                .fa-check-circle{
-                    @include icon-border()
-                }   
-            }
-        }
-    }  
+    } 
 }
 
