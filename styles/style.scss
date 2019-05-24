@@ -20,6 +20,7 @@ $tablet: 700px;
     text-shadow: 3px 3px #15cda8;
 }
 
+
 @mixin texts-box{
     background-color: #dfd0ee;
     height: 45px;
@@ -76,7 +77,19 @@ header{
         @media only screen and (max-width: $mobile){
             font-size: 45px;
         }
-        } 
+        }
+    .toDoTitle{
+        @include pageTitle-font();
+        font-size: 50px;
+        background-color: $body-color;
+        @media only screen and (max-width: $tablet){
+            font-size: 50px;
+        }
+        @media only screen and (max-width: $mobile){
+            font-size: 45px;
+        }
+
+    }     
     span{
         margin-left: 20px;
         color: $month-color;
