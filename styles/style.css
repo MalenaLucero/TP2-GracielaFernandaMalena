@@ -1,10 +1,10 @@
 body {
-  background-color: #f1e4e4;
-  font-family: 'Roboto', sans-serif; }
+  background-color: #e9e4e6;
+  font-family: 'Nunito', sans-serif; }
 
 .container {
   margin: 0 auto;
-  width: 70%;
+  width: 60%;
   text-align: center; }
   @media only screen and (max-width: 420px) {
     .container {
@@ -39,13 +39,13 @@ header span {
   color: #69468b; }
 
 div.input {
-  width: 75%;
+  width: 65%;
   height: 80px;
   background-color: #099a97;
   padding: 10px;
   text-align: center;
+  border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
-  border-radius: 10px;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -54,8 +54,8 @@ div.input {
     div.input {
       width: 85%; } }
   div.input input {
-    width: 90%;
-    height: 58px;
+    width: 85%;
+    height: 64px;
     float: left;
     color: #fff;
     font-size: 15px;
@@ -63,7 +63,7 @@ div.input {
     text-indent: 18px;
     padding: 0 60px 0 0;
     background: rgba(255, 255, 255, 0.4);
-    border-radius: 5px 25px 25px 5px;
+    border-radius: 5px;
     border: 0px; }
   div.input a.addButton {
     color: white;
@@ -83,14 +83,16 @@ div.input {
     position: absolute; }
 
 .itemPending {
-  background-color: white;
+  background-color: #dfd0ee;
   height: 45px;
-  border-radius: 7px;
-  padding: 5px 8px;
-  margin-bottom: 5px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  border: 3px solid #69468b;
+  box-shadow: 5px 5px #c0b6b6;
+  color: black;
+  font-weight: bold;
   list-style: none; }
   .itemPending .buttons .fa-trash-alt {
     padding-right: 10px; }
@@ -99,14 +101,16 @@ div.input {
     border-left: 1px solid #a8a8a8; }
 
 .itemComplete {
-  background-color: white;
+  background-color: #dfd0ee;
   height: 45px;
-  border-radius: 7px;
-  padding: 5px 8px;
-  margin-bottom: 5px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  border: 3px solid #69468b;
+  box-shadow: 5px 5px #c0b6b6;
+  color: black;
+  font-weight: bold;
   list-style: none; }
   .itemComplete .buttons .fa-trash-alt {
     padding-right: 10px; }
@@ -116,9 +120,43 @@ div.input {
 
 main .textPending {
   color: #615a67; }
+main .listPending .itemPending {
+  background-color: #dfd0ee;
+  height: 45px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  border: 3px solid #69468b;
+  box-shadow: 5px 5px #c0b6b6;
+  color: black;
+  font-weight: bold;
+  list-style-type: none; }
+  main .listPending .itemPending .buttons .fa-trash-alt {
+    padding-right: 10px; }
+  main .listPending .itemPending .buttons .fa-check-circle {
+    padding-left: 10px;
+    border-left: 1px solid #a8a8a8; }
 main hr {
   width: 70%; }
 main .textComplete {
   color: #615a67; }
+main .listComplete .itemComplete {
+  background-color: #dfd0ee;
+  height: 45px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  border: 3px solid #69468b;
+  box-shadow: 5px 5px #c0b6b6;
+  color: black;
+  font-weight: bold;
+  list-style-type: none; }
+  main .listComplete .itemComplete .buttons .fa-trash-alt {
+    padding-right: 10px; }
+  main .listComplete .itemComplete .buttons .fa-check-circle {
+    padding-left: 10px;
+    border-left: 1px solid #a8a8a8; }
 
 /*# sourceMappingURL=style.css.map */
