@@ -102,10 +102,10 @@ div.input a.addButton {
 
 .itemPending {
   background-color: #dfd0ee;
-  height: 45px;
   padding: 5px 10px;
   margin-bottom: 15px;
   display: flex;
+  text-align: left;
   align-items: center;
   border: 3px solid #69468b;
   box-shadow: 5px 5px #c0b6b6;
@@ -117,10 +117,10 @@ div.input a.addButton {
 
 .itemComplete {
   background-color: #dfd0ee;
-  height: 45px;
   padding: 5px 10px;
   margin-bottom: 15px;
   display: flex;
+  text-align: left;
   align-items: center;
   border: 3px solid #69468b;
   box-shadow: 5px 5px #c0b6b6;
@@ -129,6 +129,12 @@ div.input a.addButton {
   justify-content: space-between;
   list-style: none;
   text-decoration: line-through;
+}
+
+.anchorContainer {
+  display: flex;
+  margin-left: 10px;
+  float: right;
 }
 
 main .textPending {

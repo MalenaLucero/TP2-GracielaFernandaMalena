@@ -5,6 +5,7 @@ $month-color: #69468b;
 $input-background-dark: #099A97;
 $text-main: #615a67;
 $placeholder: white;
+$counterBoxes: #97d5d3;
 
 //breakpoints//
 $mobile: 420px;
@@ -21,10 +22,10 @@ $tablet: 700px;
 
 @mixin texts-box{
     background-color: #dfd0ee;
-    height: 45px;
     padding: 5px 10px;
     margin-bottom: 15px;
     display: flex;
+    text-align: left;
     align-items: center;
     border: 3px solid $month-color;
     box-shadow: 5px 5px #c0b6b6;
@@ -34,7 +35,7 @@ $tablet: 700px;
 }
 
 @mixin taskCounter-boxes{
-    background-color: #97d5d3;
+    background-color: $counterBoxes;
     padding: 10px 18px;
     text-align: center;
     font-size: 14px;
@@ -116,7 +117,7 @@ div.input{
     a.addButton{ 
         color: white;
         font-size: 20px;
-        text-shadow: 2px 2px #69468b;
+        text-shadow: 2px 2px $month-color;
         text-decoration: none;
         background-color: $title-color;
         width: 60px;
@@ -141,6 +142,12 @@ div.input{
     @include texts-box();
     list-style: none;
     text-decoration: line-through;
+}
+
+.anchorContainer{
+    display: flex;
+    margin-left: 10px;
+    float: right;
 }
 
 main{
