@@ -54,7 +54,7 @@ header span {
 div.input {
   width: 65%;
   height: 80px;
-  background-color: #099a97;
+  background-color: #099A97;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
@@ -113,13 +113,6 @@ div.input a.addButton {
   font-weight: bold;
   list-style: none;
 }
-.itemPending .buttons .fa-trash-alt {
-  padding-right: 10px;
-}
-.itemPending .buttons .fa-check-circle {
-  padding-left: 10px;
-  border-left: 1px solid #a8a8a8;
-}
 
 .itemComplete {
   background-color: #dfd0ee;
@@ -133,13 +126,7 @@ div.input a.addButton {
   color: black;
   font-weight: bold;
   list-style: none;
-}
-.itemComplete .buttons .fa-trash-alt {
-  padding-right: 10px;
-}
-.itemComplete .buttons .fa-check-circle {
-  padding-left: 10px;
-  border-left: 1px solid #a8a8a8;
+  text-decoration: line-through;
 }
 
 main .textPending {
@@ -150,6 +137,24 @@ main hr {
 }
 main .textComplete {
   color: #615a67;
+}
+main .taskCounter {
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+main .taskCounter .counterPending {
+  background-color: #97d5d3;
+  padding: 5px 15px;
+  text-align: center;
+}
+main .taskCounter .counterComplete {
+  background-color: #97d5d3;
+  padding: 5px 15px;
+  text-align: center;
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

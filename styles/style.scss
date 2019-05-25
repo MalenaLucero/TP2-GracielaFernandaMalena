@@ -2,7 +2,7 @@
 $body-color: #e9e4e6;
 $title-color: #9764c7;
 $month-color: #69468b;
-$input-background-dark: #099a97;
+$input-background-dark: #099A97;
 $text-main: #615a67;
 $placeholder: white;
 
@@ -130,37 +130,22 @@ div.input{
     }
 }
 
-
-
-
 .itemPending{
     @include texts-box();
     list-style: none;
     //float: right;
-    .buttons{
-        .fa-trash-alt{
-            padding-right: 10px;
-        }
-        .fa-check-circle{
-            @include icon-border()
-        }
-    }
 }
 
 .itemComplete{
     @include texts-box();
     list-style: none;
-    //float: right;
-    .buttons{             
-        .fa-trash-alt{
-            padding-right: 10px;
-        }
-        .fa-check-circle{
-            @include icon-border()
-        }   
-    }
+    text-decoration: line-through;
+    //float: right; 
 }
 
+/*.anchorContainer{
+
+}*/
 main{
     .textPending{
         color: $text-main;
@@ -170,6 +155,28 @@ main{
     }
     .textComplete{
         color: $text-main;
-    } 
+    }
+    .taskCounter{
+        font-size: 11px;
+        font-weight: bold;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        display: 0 auto;
+        .counterPending{
+            //border: 2px solid #6BC3C1;
+            background-color: #97d5d3;
+            padding: 5px 15px;
+            text-align: center;
+        }
+        .counterComplete{
+            //border: 2px solid #8ffffd;
+            background-color: #97d5d3;
+            padding: 5px 15px;
+            text-align: center;
+            margin-left: 20px;
+        }
+    }
 }
+
 
