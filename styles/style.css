@@ -131,10 +131,6 @@ div.input a.addButton {
   text-decoration: line-through;
 }
 
-.anchorContainer {
-  float: right;
-}
-
 main .textPending {
   color: #615a67;
 }

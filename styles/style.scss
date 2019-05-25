@@ -10,7 +10,6 @@ $placeholder: white;
 $mobile: 420px;
 $tablet: 700px;
 
-
 @mixin pageTitle-font{
     font-family: 'Pacifico', cursive;
     font-size: 70px;
@@ -142,10 +141,6 @@ div.input{
     @include texts-box();
     list-style: none;
     text-decoration: line-through;
-}
-
-.anchorContainer{
-    float: right;
 }
 
 main{
