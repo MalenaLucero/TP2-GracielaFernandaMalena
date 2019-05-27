@@ -83,9 +83,9 @@ var printTask = function(){
 }
 
 var sendTitle = function(){
-    var x =document.getElementById("titleInput");
+    var titleInput =document.getElementById("titleInput");
     var commentItem = document.createElement ("p")
-    commentItem.innerText = x.value
+    commentItem.innerText = titleInput.value
     demo = document.getElementById("demo")
     demo.appendChild(commentItem)
 }
