@@ -21,6 +21,7 @@ var spanPending
 var spanComplete
 var anchorContainer //div que contiene los iconos de cada lista
 
+
 var loadedPage = function(){
     listPending = document.getElementById('listPending')
     listPending.innerHTML = ''

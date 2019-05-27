@@ -34,21 +34,6 @@ header .pageTitle {
   @media only screen and (max-width: 420px) {
     header .pageTitle {
       font-size: 45px; } }
-header .toDoTitle {
-  font-family: 'Pacifico', cursive;
-  font-size: 70px;
-  text-align: center;
-  letter-spacing: 2px;
-  color: #9764c7;
-  text-shadow: 3px 3px #15cda8;
-  font-size: 50px;
-  background-color: #e9e4e6; }
-  @media only screen and (max-width: 700px) {
-    header .toDoTitle {
-      font-size: 50px; } }
-  @media only screen and (max-width: 420px) {
-    header .toDoTitle {
-      font-size: 45px; } }
 header span {
   margin-left: 20px;
   color: #69468b; }

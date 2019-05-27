@@ -14,8 +14,11 @@
 </head>
 <body onload="loadedPage()">
     <header>
-        <h1 class="pageTitle">To-do list: 
-            <input class="toDoTitle" id="titleInput" placeholder="Tipo de lista"></h1>
+    <div class="toDoTitle">
+        <input id="titleInput" placeholder="Tipo de lista"><span class= "tooltiptext">Introdusca el titulo de su To Do List</span>
+        <a href="#" class="addButton" onclick="printTask()"><i class="fas fa-plus"></i></a>
+    </div>
+        <h1 class="pageTitle">To-do list:</h1><p></p>
     </header>
     <div class="input">
         <input id="textInput" placeholder="Escribí una tarea" onkeypress="handleKeyPress(event)">

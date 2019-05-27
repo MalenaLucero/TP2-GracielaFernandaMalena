@@ -78,18 +78,7 @@ header{
             font-size: 45px;
         }
         }
-    .toDoTitle{
-        @include pageTitle-font();
-        font-size: 50px;
-        background-color: $body-color;
-        @media only screen and (max-width: $tablet){
-            font-size: 50px;
-        }
-        @media only screen and (max-width: $mobile){
-            font-size: 45px;
-        }
-
-    }     
+        
     span{
         margin-left: 20px;
         color: $month-color;
@@ -141,6 +130,7 @@ div.input{
         align-items: center;
         position: absolute;
     }
+
 }
 
 
