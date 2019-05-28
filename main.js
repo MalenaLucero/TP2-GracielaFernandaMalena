@@ -16,7 +16,7 @@ var numberComplete
 var spanPending
 var spanComplete
 var anchorContainer //div que contiene los iconos de cada lista
-var titleBtn
+var titleBtn //boton de borrado
 
 var loadedPage = function(){
     listPending = document.getElementById('listPending')
@@ -92,12 +92,8 @@ var sendTitle = function(){
      commentItem.classList.add('inputTclass')
      commentItem.id = (0)
 
-     //var anchorContainerT = document.createElement('div')
-     //anchorContainerT.classList.add('anchorContainerT')
-     //commentItem.appendChild(anchorContainerT)
-
+     //intento de boton de borrado by Grace
      var titleBtn = document.createElement('a')
-     //titleBtn.innerText = 'borrame'
      titleBtn.classList.add('titleBtn')
      commentItem.appendChild(titleBtn)
 
@@ -111,28 +107,13 @@ var sendTitle = function(){
      
     }
 
-
-
-
 var deleteTBtn = function(){
   var titleItem =document.getElementById("0")
 
   if(titleItem.hasChildNodes()) {
   titleItem.removeChild (titleItem.childNodes[0]);
   }
-
-  
 }
-
-//deleteTitle.classList.add('deleteTitle')
-//removeSimple = document.createElement('img')
-//removeSimple.classList.add('removeSimple')
-//removeSimple.src = 'assets/delete_purple.png'
-//removeSimple.classList.add('removeIcon')
-//anchorContainer.appendChild(deleteTitle)
-//deleteTitle.appendChild(removeSimple)
-//deleteTitle.id = index
-
 
 var deleteItem = function(btn){
     allTasks.splice(btn.id, 1)
@@ -149,7 +130,6 @@ var handleKeyPressTitle = function(event){
         sendTitle()
     }
 }
-
 
 var toggle = function(id){
     allTasks[id].isPending = !allTasks[id].isPending
