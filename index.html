@@ -14,10 +14,10 @@
 <body onload="loadedPage()">
     <header>
     <div class="toDoTitle">
-        <input id="titleInput" type="text" value=""  placeholder ="Tipo de lista" onkeypress="handleKeyPress(event)"><span class= "tooltiptext">Escribí el título de tu To Do List</span>
+        <input id="titleInput" type="text" value=""  placeholder ="Tipo de lista" onkeypress="handleKeyPressTitle(event)"><span class= "tooltiptext">Escribí el título de tu To Do List</span>
         <a href="#" class="addBin" onclick="sendTitle()"><i class="fas fa-plus"></i></a>
     </div>
-        <h1 class="pageTitle">To-do list:<p id="demo" ></p></h1>
+        <h1 class="pageTitle" id="demo">To-do list:</h1>
     </header>
     <div class="input">
         <input id="textInput" placeholder="Escribí una tarea" onkeypress="handleKeyPress(event)">

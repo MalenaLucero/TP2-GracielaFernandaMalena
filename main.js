@@ -1,6 +1,7 @@
 var counterPending //contador de tareas pendientes
 var counterComplete//contador de tareas completas
 var allTasks = [] //Array de las tasks como objects
+var secondTitle = []
 var listPending //lista de tareas pendientes
 var listComplete //lista de tareas completadas
 var textPending //texto "no hay tareas pendientes"
@@ -15,10 +16,9 @@ var numberComplete
 var spanPending
 var spanComplete
 var anchorContainer //div que contiene los iconos de cada lista
-
+var titleBtn
 
 var loadedPage = function(){
-
     listPending = document.getElementById('listPending')
     listPending.innerHTML = ''
     listComplete = document.getElementById('listComplete')
@@ -83,16 +83,69 @@ var printTask = function(){
 }
 
 var sendTitle = function(){
-    var titleInput =document.getElementById("titleInput");
-    var commentItem = document.createElement ("p")
-    commentItem.innerText = titleInput.value
-    demo = document.getElementById("demo")
-    demo.appendChild(commentItem)
+     var titleInput =document.getElementById("titleInput");
+     titleInput.innerHTML = ''
+     var commentItem = document.createElement ("p")
+     commentItem.innerText = titleInput.value
+     demo = document.getElementById("demo")
+     demo.appendChild(commentItem)
+     commentItem.classList.add('inputTclass')
+     commentItem.id = (0)
+
+     //var anchorContainerT = document.createElement('div')
+     //anchorContainerT.classList.add('anchorContainerT')
+     //commentItem.appendChild(anchorContainerT)
+
+     var titleBtn = document.createElement('a')
+     //titleBtn.innerText = 'borrame'
+     titleBtn.classList.add('titleBtn')
+     commentItem.appendChild(titleBtn)
+
+    var imgTitleBtn = document.createElement('img')
+    imgTitleBtn.classList.add('imgTitleBtn')
+    imgTitleBtn.src = 'assets/delete_purple.png'
+    
+    titleBtn.appendChild(imgTitleBtn)
+
+     titleBtn.onclick = function(){deleteTBtn()}
+     
+    }
+
+
+
+
+var deleteTBtn = function(){
+  var titleItem =document.getElementById("0")
+
+  if(titleItem.hasChildNodes()) {
+  titleItem.removeChild (titleItem.childNodes[0]);
+  }
+
+  
+}
+
+//deleteTitle.classList.add('deleteTitle')
+//removeSimple = document.createElement('img')
+//removeSimple.classList.add('removeSimple')
+//removeSimple.src = 'assets/delete_purple.png'
+//removeSimple.classList.add('removeIcon')
+//anchorContainer.appendChild(deleteTitle)
+//deleteTitle.appendChild(removeSimple)
+//deleteTitle.id = index
+
+
+var deleteItem = function(btn){
+    allTasks.splice(btn.id, 1)
+    loadedPage()
 }
 
 var handleKeyPress = function(event){
     if(event.code === 'Enter'){
         printTask()
+    }
+}
+var handleKeyPressTitle = function(event){
+    if(event.code === 'Enter'){
         sendTitle()
     }
 }
