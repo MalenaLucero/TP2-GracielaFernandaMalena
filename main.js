@@ -1,3 +1,5 @@
+/* Chequear si realmente es necesario declarar todas las variables de manera global, 
+no todas se usan y se podrían declarar en una sola línea.*/
 var counterPending //contador de tareas pendientes
 var counterComplete//contador de tareas completas
 var allTasks = [] //Array de las tasks como objects
@@ -35,6 +37,7 @@ var loadedPage = function(){
         anchorContainer.classList.add('anchorContainer')
         newTask.appendChild(anchorContainer)
 
+        //Los botones se podrían haber creado en una función aparte
         deleteBtn = document.createElement('a')
         deleteBtn.classList.add('deleteBtn')
         removeSimple = document.createElement('img')
@@ -123,3 +126,5 @@ var showInstructions = function(text, counter){
 var showData = function(element, data){
     element.innerText = data
 }
+
+/*No dejar comentarios en el código final.*/
